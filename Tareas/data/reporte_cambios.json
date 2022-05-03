@@ -1,0 +1,77 @@
+[
+	{
+	  "op": "core/text-transform",
+	  "engineConfig": {
+		"facets": [],
+		"mode": "row-based"
+	  },
+	  "columnName": "Deaths",
+	  "expression": "value.toNumber()",
+	  "onError": "keep-original",
+	  "repeat": false,
+	  "repeatCount": 10,
+	  "description": "Text transform on cells in column Deaths using expression value.toNumber()"
+	},
+	{
+	  "op": "core/text-transform",
+	  "engineConfig": {
+		"facets": [],
+		"mode": "row-based"
+	  },
+	  "columnName": "Confirmed",
+	  "expression": "value.toNumber()",
+	  "onError": "keep-original",
+	  "repeat": false,
+	  "repeatCount": 10,
+	  "description": "Text transform on cells in column Confirmed using expression value.toNumber()"
+	},
+	{
+	  "op": "core/text-transform",
+	  "engineConfig": {
+		"facets": [],
+		"mode": "row-based"
+	  },
+	  "columnName": "Date",
+	  "expression": "value.toDate()",
+	  "onError": "keep-original",
+	  "repeat": false,
+	  "repeatCount": 10,
+	  "description": "Text transform on cells in column Date using expression value.toDate()"
+	},
+	{
+	  "op": "core/text-transform",
+	  "engineConfig": {
+		"facets": [],
+		"mode": "row-based"
+	  },
+	  "columnName": "Admin2",
+	  "expression": "grel:if(value == null, cells[\"Province_State\"].value , cells[\"Admin2\"].value)",
+	  "onError": "keep-original",
+	  "repeat": false,
+	  "repeatCount": 10,
+	  "description": "Text transform on cells in column Admin2 using expression grel:if(value == null, cells[\"Province_State\"].value , cells[\"Admin2\"].value)"
+	},
+	{
+	  "op": "core/text-transform",
+	  "engineConfig": {
+		"facets": [],
+		"mode": "row-based"
+	  },
+	  "columnName": "UID",
+	  "expression": "value.toNumber()",
+	  "onError": "keep-original",
+	  "repeat": false,
+	  "repeatCount": 10,
+	  "description": "Text transform on cells in column UID using expression value.toNumber()"
+	},
+	{
+	  "op": "core/column-removal",
+	  "columnName": "code3",
+	  "description": "Remove column code3"
+	},
+	{
+	  "op": "core/column-removal",
+	  "columnName": "Country_Region",
+	  "description": "Remove column Country_Region"
+	}
+  ]
